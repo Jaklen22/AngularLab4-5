@@ -1,0 +1,15 @@
+<!-- <button class="btn btn-primary" (click)="login()" [disabled]="isUserLogged">login</button>
+<button class="btn btn-danger" (click)="logout()"[disabled]="!isUserLogged">logout</button> -->
+
+<form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+    </div>
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="isUserLogged">Login</button>
+  </form>
+  <button class="btn btn-danger mt-2" (click)="logout()" [disabled]="!isUserLogged">Logout</button>
